@@ -67,7 +67,7 @@ nav{
     width: 100%;
 }
 .home-hero{
-    background: url("/img/home-hero.jpg");
+    background: url("./img/home-hero.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
