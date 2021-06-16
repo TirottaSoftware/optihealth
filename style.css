@@ -1,0 +1,445 @@
+/* 
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Khula', sans-serif;
+font-family: 'Telex', sans-serif;
+*/
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    overflow-x: hidden;
+}
+/* Navbar */
+nav{
+    display:flex;
+    padding:1%;
+    position: fixed;
+    font-family: 'Rajdhani', sans-serif;
+    width: 100vw;
+    background: #BAD24A;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+}
+.logo{
+    display:flex;
+    cursor: pointer;
+    max-width: 15%;
+    height:3rem;
+}
+.logo h1{
+    font-size: 2rem;
+    color:white;
+    align-self: center;
+    font-weight: bold;
+}
+.nav-links{
+    display:flex;
+    width: 25%;
+    list-style: none;
+    margin-right: 3%;
+    justify-content: flex-end;
+}
+.nav-links li{
+    margin: 0 3%;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links li a{
+    text-decoration: none;
+    position: relative;
+    color:white;
+}
+.nav-links li a:after{
+    content: "";
+    position: absolute;
+    background: #819622;
+    height: 3px;
+    width: 0;
+    transition: .3s ease-in-out;
+    left: 0;
+    bottom: 0;
+}
+.nav-links li a:hover:after{
+    width: 100%;
+}
+.home-hero{
+    background: url("/img/home-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.hero-overlay{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.427);
+    z-index: 1;
+}
+.hero-desc{
+    color:white;
+    font-family: 'Telex', sans-serif;
+    position: absolute;
+    top:30%;    
+    left:10%;
+}
+.hero-desc h3{
+    font-size: 4vw;
+    width: 60%;
+    text-transform: uppercase;
+    font-family: 'Khula', sans-serif;
+}
+.hero-desc p{
+    font-size:1.2vw;
+    margin-bottom: 3%;
+    width: 50%;
+}
+.hero-desc a{
+    color:white;
+    background: transparent;
+    text-decoration: none;
+    border:1px solid #BAD24A;
+    padding: 1% 5%;
+}
+.hero-desc a:hover{
+    background: #BAD24A;
+    color:black
+}
+/* About us section */
+#about-us{
+    margin: 5% 0;
+}
+.section-heading h2{
+    display: flex;
+    flex-flow: column;
+    margin: 3% auto;
+    position: relative;
+    width: 7%;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Khula', sans-serif;
+    white-space: nowrap;
+}
+.section-heading h2:after{
+    content: "";
+    position: absolute;
+    background: #BAD24A;
+    height: 2px;
+    width: 100%;
+    transition: .3s ease-in-out;
+    left: 0;
+    bottom: 5px;
+}
+.about-container{
+    display:flex;
+    width: 80%;
+    margin: 5% 10% 3% 10%;
+}
+.about-container img{
+    width: 50%;
+}
+.about-desc{
+    padding:3%;
+}
+.about-desc h2{
+    font-size: 3.2vw;
+    font-family: 'Khula', sans-serif;
+}
+.about-desc p{
+    font-size: 1.3vw;
+    font-family: 'Telex', sans-serif;
+    margin-bottom:5%;
+    font-weight: 0;
+    color: rgb(126, 124, 124);
+    width: 90%;
+}
+.about-line{
+    height: 3px;
+    margin-bottom:3%;
+    width: 100%;
+    background: #BAD24A;
+}
+.about-desc a{
+    color:black;
+    background: white;
+    text-decoration: none;
+    font-family: 'Telex', sans-serif;
+    font-size: 1.3vw;
+    border: 1px solid #BAD24A;
+    padding: 1.5% 7%;
+}
+.about-desc a:hover{
+    background: #BAD24A;
+    color:white;
+}
+/* Team section */
+.team-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin:5% 10%;
+}
+.team-card{
+    display: flex;
+    border-radius: 25px;
+    flex-flow: column;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(205,220,104,1) 0%, rgba(186,210,74,1) 100%, rgba(253,244,179,1) 100%);
+    /* background: linear-gradient(180deg, rgba(186,210,74,1) 0%, rgba(98,175,8,1) 100%); */
+    width: 30%;
+}
+.team-card h1{
+    font-size: 2.4rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+.team-card h4{
+    font-size: 1.4rem;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 10%;
+    font-family: 'Khula', sans-serif;
+}
+.team-card h5{
+    font-size: 1rem;
+    font-family: 'Khula', sans-serif;
+    font-weight: 100;
+}
+.team-card p{
+    width: 80%;
+    margin: 5% 10%;
+    font-family: 'Telex', sans-serif;
+    color: white;
+}
+#member-1{
+    background: url("./img/member-1.jpg");
+    background-size: cover;
+}
+#member-2{
+    background-position: right;
+    background: url("./img/member-2.jpg");
+    background-size: cover;
+}
+#member-3{
+    background: url("./img/member-3.jpg");
+    background-size: cover;
+}
+.team-card .member-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 10% auto;
+}
+
+/* Popular section */
+.popular-container{
+    width: 80%;
+    margin: 5% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.popular-card{
+    width: 45%;
+    border: 2px solid #BAD24A;
+    border-radius: 25px;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.popular-card img{
+    width: 80%;
+    margin: 0 auto;
+}
+.popular-card h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+}
+.popular-card p{
+    font-family: 'Khula', sans-serif;
+    color:rgb(126, 124, 124);
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+.popular-card h3{
+    font-family: 'Khula', sans-serif;
+    font-size: 1.6rem;
+}
+.popular-card a{
+    font-size: 1.6rem;
+    font-family: 'Telex', sans-serif;
+    text-decoration: none;
+    background: #BAD24A;
+    padding: 1% 10%;
+    color: white;
+}
+/* Reviews section */
+#reviews .p-section{
+    text-align: center;
+    color: gray;
+    font-size: 1.7rem;
+    font-family: 'Telex', sans-serif;
+}
+.review-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1% 10%;
+}
+.review-card{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 42.5%;
+    background:#fdf4b36f;
+    border: 3px solid #BAD24A;
+    border-radius: 25px;
+    padding:3% 3% 1% 3%;
+    margin: 1% 0;
+}
+.review-card #comment{
+    font-family: 'Telex', sans-serif;
+    width: 70%;
+    font-size: 1.4rem;
+}
+.review-card h1, .review-card #author-email{
+    text-align: end;
+    font-family: 'Khula', sans-serif;
+}
+.review-card h1{
+    margin-top:5%;
+}
+/* Responsiveness */
+@media screen and (max-width: 1366px) {
+    .team-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .team-card{
+        margin:2.5%;
+        width: 45%;
+    }
+    .section-heading h2:after{
+        bottom: 0;
+    }
+}
+@media screen and (max-width: 550px) {
+    .team-card .member-img{
+        width: 200px;
+        height: 200px;
+    }
+    .team-card h1{
+        font-size: 2.4rem;
+        font-family: 'Rajdhani', sans-serif;
+    }
+    .team-card h4{
+        font-size: 1.2rem;
+        font-weight: 200;
+        width: 80%;
+        margin: 0 10%;
+        font-family: 'Khula', sans-serif;
+    }
+    .team-card h5{
+        font-size: 1rem;
+    }
+    .team-card p{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .team-card .member-img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .popular-container{
+        flex-wrap: wrap;
+    }
+    .popular-card{
+        width: 80%;
+        margin: 10%;
+    }
+    .section-heading h2{
+        font-size: 1.2rem;
+        width: 6rem;
+    }
+    .about-container{
+        display: flex;
+        flex-flow: column;
+    }
+    .about-desc{
+        text-align: center;
+    }
+    .about-desc h2{
+        font-size: 2rem;
+    }
+    .about-desc p{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .about-desc a{
+        font-size: 1rem;
+    }
+    .about-container img{
+        margin-top: 3%;
+        width: 100%;
+    }
+    .team-card{
+        margin:5% 15%;
+        width: 70%;
+    }
+    .review-card{
+        width: 100%;
+    }
+    .review-card #comment{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 980px) {
+    .home-hero{
+        background-position: right;
+    }
+    nav, .hero-desc{
+        z-index: 2;
+    }
+    .hero-overlay{
+        display: block;
+    }
+    .hero-desc{
+        display:flex;
+        flex-flow: column;
+        align-items: center;
+        left:0;
+        width: 100%;
+        text-align: center;
+    }
+    .hero-desc p{
+        width: 30%;
+        font-size: 1.6vw;
+    }
+    .hero-desc a{
+        margin:auto;
+    }
+}
+@media screen and (max-width: 980px) {
+    .hero-desc h3{
+        font-size:1.6rem;
+    }
+    .nav-links{
+        display: none;
+    }
+    .hero-desc p{
+        font-size: 1rem;
+        width: 50%;
+    }
+}
