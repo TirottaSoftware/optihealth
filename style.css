@@ -3,7 +3,6 @@ font-family: 'Rajdhani', sans-serif;
 font-family: 'Khula', sans-serif;
 font-family: 'Telex', sans-serif;
 */
-
 *{
     margin:0;
     padding:0;
@@ -318,6 +317,102 @@ nav{
 .review-card h1{
     margin-top:5%;
 }
+/* Footer */
+footer{
+    display: flex;
+    background: #fdf4b36f;
+    padding: 3% 10%;
+    position:relative;
+    justify-content: space-between;
+}
+.footer-main{
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+}
+.footer-main h1{
+    font-family: 'Khula', sans-serif;
+}
+.footer-flex-col{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.footer-logo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#logo-text-footer{
+    font-family: 'Rajdhani', sans-serif;
+}
+.footer-logo img{
+    max-width: 20%;
+    height: auto;
+}
+.footer-logo h1{
+    font-size: 4rem;
+}
+.newsletter{
+    display: flex;
+    justify-content: center;
+}
+.newsletter input{
+    font-size: 2rem;
+    max-width: 70%;
+}
+.newsletter button{
+    max-width: 30%;
+    font-family: 'Telex', sans-serif;
+    font-size: 1.4rem;
+    padding:1% 5%;
+    cursor: pointer;
+    margin: 0 1%;
+    border: none;
+    background: #63721c;
+    color:white;
+}
+.newsletter input::placeholder{
+    font-size: 1.7rem;
+    padding-left: 1%;
+}
+.social-links{
+    width: 40%;
+    margin-top:3%;
+    cursor: pointer;
+    justify-content: space-between;
+    font-size: 3rem;
+    display: flex;
+    color: #63721c;
+}
+.newsletter button:hover{
+    background-color:#BAD24A;
+    color:#63721c;
+}
+.social-links i:hover{
+    color: #BAD24A;
+}
+.footer-nav-container{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+.links-ml{
+    display: flex;
+    flex-flow: column;
+}
+.footer-links h3{
+    font-size: 2rem;
+    font-family: 'Khula', sans-serif;
+}
+.links-ml a{
+    font-size: 1.5rem;
+    color: #63721c;
+    font-family: 'Telex', sans-serif;
+    text-decoration: none;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 1366px) {
     .team-container{
@@ -330,6 +425,20 @@ nav{
     }
     .section-heading h2:after{
         bottom: 0;
+    }
+    footer{
+        flex-flow: column;
+        justify-content: center;
+    }
+    .footer-main{
+        width: 60%;
+        margin:auto;
+    }
+    .footer-main h1{
+        white-space: nowrap;
+    }
+    .footer-nav-container{
+        width: 100%;
     }
 }
 @media screen and (max-width: 550px) {
@@ -354,6 +463,25 @@ nav{
     .team-card p{
         font-size: 0.8rem;
     }
+    #logo-text-footer{
+        font-size: 2rem;
+    }
+    .footer-main{
+        width: 80%;
+        align-items: center;
+    }
+    .footer-main h1{
+        font-size: 1.7rem;
+    }
+    .newsletter input{
+        font-size: 1.5rem;
+    }
+    .newsletter button{
+        font-size: 1rem;
+    }
+    .footer-flex-col{
+        width: 80%;
+    }
 }
 @media screen and (max-width: 450px) {
     .team-card .member-img{
@@ -362,6 +490,12 @@ nav{
     }
 }
 @media screen and (max-width: 980px) {
+    .footer-links h3{
+        font-size: 1.5rem;
+    }
+    .links-ml a{
+        font-size: 1.2rem;
+    }
     .popular-container{
         flex-wrap: wrap;
     }
@@ -403,6 +537,10 @@ nav{
     }
     .review-card #comment{
         font-size: 1rem;
+    }
+    .social-links{
+        width: 70%;
+        font-size: 2.5rem;
     }
 }
 @media screen and (max-width: 980px) {
