@@ -22,6 +22,10 @@ nav{
     z-index: 1;
     justify-content: space-between;
 }
+#nav-orange{
+    /* #ED881D, #FEEF65; */
+    background:#FFBE1F;
+}
 .logo{
     display:flex;
     cursor: pointer;
@@ -61,6 +65,12 @@ nav{
     transition: .3s ease-in-out;
     left: 0;
     bottom: 0;
+}
+#nav-orange .nav-links li a:after{
+    background: #ED881D;
+}
+.bg-orange{
+    background:#FFBE1F;
 }
 .nav-links li a:hover:after{
     width: 100%;
@@ -142,7 +152,7 @@ nav{
     text-decoration: none;
 }
 .hidden{
-    transform: translateX(100%);
+    transform: translateX(150%);
 }
 /* About us section */
 #about-us{
@@ -446,6 +456,140 @@ footer{
     color: #63721c;
     font-family: 'Telex', sans-serif;
     text-decoration: none;
+}
+
+/* ABOUT US PAGE ------------------------------------------------------------------ */
+
+.video-hero{
+    width: 100%;
+}
+.about-banner-title{
+    position: absolute;
+    top:50vh;
+    width: 20%;
+    font-family: 'Khula', sans-serif;
+    text-align: center;
+    margin: 0 40%;
+}
+.about-banner-title h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+}
+.about-banner-title a{
+    font-size: 1rem;
+    color:white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 1% 5%;
+}
+.about-banner-title a:hover{
+    color: #ED881D;
+    border:2px solid #ED881D;
+}
+.about-us-container{
+    display: flex;
+    flex-flow: row-reverse;
+    width: 80%;
+    margin: 5% 0;
+}
+.about-us-container .about-info{
+    width: 40%;
+    font-family: 'Khula', sans-serif;
+    margin: 5%;
+    font-size: 1.3rem;
+}
+.about-info p{
+    font-family: 'Telex', sans-serif;
+}
+.about-us-container img{
+    width: 60%;
+}
+.about-mission{
+    background:url("./img/orange.jpg");
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+}
+.about-mission-text{
+    font-family: 'Khula', sans-serif;
+    position: relative;
+    top:20%;
+    font-size: 2rem;
+    width: 40%;
+    left:10%;
+}
+.about-mission-text p{
+    font-family: 'Khula', sans-serif;
+}
+.certificates-container{
+    margin:5% 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.certificate-card {
+    position: relative;
+    width: 30%;
+}
+
+.certificate-card .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.card-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.certifications-section-title{
+    text-align: center;
+    margin:5%;
+    font-size: 1rem;
+    
+    font-family: 'Khula', sans-serif;
+}
+.certificate-card:hover .image {
+    opacity: 0.3;   
+}
+
+.certificate-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay div img{
+    width: 50%;
+    margin: auto;
+}
+.card-overlay div h1{
+    font-family: 'Khula', sans-serif;
+}
+.card-overlay div p{
+    font-family: 'Telex', sans-serif;
+}
+.footer-orange .footer-main .newsletter button{
+    background:white;
+    color: #ED881D;
+
+    border: 2px solid #ED881D;
+}
+.footer-orange .footer-main .newsletter button:hover{
+    background: #ED881D;
+    color: white;
+}
+.footer-links-orange a{
+    color: white;
 }
 
 /* Responsiveness */
