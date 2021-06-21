@@ -109,6 +109,41 @@ nav{
     background: #BAD24A;
     color:black
 }
+/* Burger & Navbar Responsiveness */
+.burger{
+    margin-right: 10%;
+    display: none;
+    flex-flow: column;
+    width: 30px;
+    cursor: pointer;
+}
+.burger-line{
+    height: 3px;
+    margin-top:5px;
+    background: white;
+}
+.sidebar{
+    position: absolute;
+    right: 3%;
+    top:100%;
+    padding: 2%;
+    background: #b9d24aaf;
+    width: 100%;
+    text-align: center;
+    border-top: 3px solid #63721c;
+    transition:.3s ease-in-out;
+    list-style: none;
+}
+.sidebar li a{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    margin:2% 0;
+    text-decoration: none;
+}
+.hidden{
+    transform: translateX(100%);
+}
 /* About us section */
 #about-us{
     margin: 5% 0;
@@ -547,6 +582,9 @@ footer{
     .home-hero{
         background-position: right;
     }
+    .burger{
+        display:flex;
+    }
     nav, .hero-desc{
         z-index: 2;
     }
@@ -558,6 +596,7 @@ footer{
         flex-flow: column;
         align-items: center;
         left:0;
+        margin-top:3%;
         width: 100%;
         text-align: center;
     }
