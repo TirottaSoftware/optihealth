@@ -6,6 +6,7 @@ font-family: 'Telex', sans-serif;
 *{
     margin:0;
     padding:0;
+    scroll-behavior: smooth;
 }
 body{
     overflow-x: hidden;
@@ -68,9 +69,6 @@ nav{
 }
 #nav-orange .nav-links li a:after{
     background: #ED881D;
-}
-.bg-orange{
-    background:#FFBE1F;
 }
 .nav-links li a:hover:after{
     width: 100%;
@@ -465,14 +463,15 @@ footer{
 }
 .about-banner-title{
     position: absolute;
-    top:50vh;
-    width: 20%;
+    white-space: nowrap;
+    top:25vw;
+    width: 100%;
     font-family: 'Khula', sans-serif;
     text-align: center;
-    margin: 0 40%;
 }
 .about-banner-title h1{
     font-size: 5rem;
+    margin:auto;
     text-transform: uppercase;
     color: white;
 }
@@ -481,7 +480,7 @@ footer{
     color:white;
     text-decoration: none;
     border: 2px solid white;
-    padding: 1% 5%;
+    padding: 0.5% 3%;
 }
 .about-banner-title a:hover{
     color: #ED881D;
@@ -496,7 +495,7 @@ footer{
 .about-us-container .about-info{
     width: 40%;
     font-family: 'Khula', sans-serif;
-    margin: 5%;
+    margin: 1% 5%;
     font-size: 1.3rem;
 }
 .about-info p{
@@ -515,7 +514,7 @@ footer{
     font-family: 'Khula', sans-serif;
     position: relative;
     top:20%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: 40%;
     left:10%;
 }
@@ -526,12 +525,14 @@ footer{
     margin:5% 10%;
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .certificate-card {
     position: relative;
     width: 30%;
+    margin:5px;
 }
 
 .certificate-card .image {
@@ -547,6 +548,7 @@ footer{
     transition: .5s ease;
     opacity: 0;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -573,9 +575,11 @@ footer{
     margin: auto;
 }
 .card-overlay div h1{
+    font-size: 1.3rem;
     font-family: 'Khula', sans-serif;
 }
 .card-overlay div p{
+    font-size: 1rem;
     font-family: 'Telex', sans-serif;
 }
 .footer-orange .footer-main .newsletter button{
@@ -592,6 +596,9 @@ footer{
     color: white;
 }
 
+.bg-orange{
+    background:#FFBE1F;
+}
 /* Responsiveness */
 @media screen and (max-width: 1366px) {
     .team-container{
@@ -620,55 +627,16 @@ footer{
         width: 100%;
     }
 }
-@media screen and (max-width: 550px) {
-    .team-card .member-img{
-        width: 200px;
-        height: 200px;
-    }
-    .team-card h1{
-        font-size: 2.4rem;
-        font-family: 'Rajdhani', sans-serif;
-    }
-    .team-card h4{
-        font-size: 1.2rem;
-        font-weight: 200;
-        width: 80%;
-        margin: 0 10%;
-        font-family: 'Khula', sans-serif;
-    }
-    .team-card h5{
-        font-size: 1rem;
-    }
-    .team-card p{
-        font-size: 0.8rem;
-    }
-    #logo-text-footer{
-        font-size: 2rem;
-    }
-    .footer-main{
-        width: 80%;
-        align-items: center;
-    }
-    .footer-main h1{
-        font-size: 1.7rem;
-    }
-    .newsletter input{
-        font-size: 1.5rem;
-    }
-    .newsletter button{
-        font-size: 1rem;
-    }
-    .footer-flex-col{
-        width: 80%;
-    }
-}
-@media screen and (max-width: 450px) {
-    .team-card .member-img{
-        width: 150px;
-        height: 150px;
-    }
-}
 @media screen and (max-width: 980px) {
+    .certificate-card{
+        width: 45%;
+    }
+    .card-overlay div h1{
+        font-size: 1rem;
+    }
+    .card-overlay div p{
+        font-size: .8rem;
+    }
     .footer-links h3{
         font-size: 1.5rem;
     }
@@ -762,5 +730,82 @@ footer{
     .hero-desc p{
         font-size: 1rem;
         width: 50%;
+    }
+    .about-us-container{
+        flex-flow: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .about-us-container .about-info{
+        width: 80%;
+        margin: 5% 10%;
+        text-align: center;
+    }
+    .about-us-container img{
+        width: 80%;
+        margin:0 10%;
+    }
+    .about-mission-text{
+        font-size: 1.4rem;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .team-card .member-img{
+        width: 200px;
+        height: 200px;
+    }
+    .certificate-card{
+        width: 100%;
+    }
+    .team-card h1{
+        font-size: 2.4rem;
+        font-family: 'Rajdhani', sans-serif;
+    }
+    .team-card h4{
+        font-size: 1.2rem;
+        font-weight: 200;
+        width: 80%;
+        margin: 0 10%;
+        font-family: 'Khula', sans-serif;
+    }
+    .team-card h5{
+        font-size: 1rem;
+    }
+    .team-card p{
+        font-size: 0.8rem;
+    }
+    #logo-text-footer{
+        font-size: 2rem;
+    }
+    .footer-main{
+        width: 80%;
+        align-items: center;
+    }
+    .footer-main h1{
+        font-size: 1.7rem;
+    }
+    .newsletter input{
+        font-size: 1.5rem;
+    }
+    .newsletter button{
+        font-size: 1rem;
+    }
+    .footer-flex-col{
+        width: 80%;
+    }
+    .about-mission-text{
+        font-size: 1.2rem;
+        width: 80%;
+        margin:10%;
+        text-align: center;
+        left: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    .team-card .member-img{
+        width: 150px;
+        height: 150px;
     }
 }
