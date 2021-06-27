@@ -787,8 +787,24 @@ footer{
     .footer-nav-container{
         width: 100%;
     }
+    .plans-container{
+        flex-flow: column;
+        height: unset;
+    }
+    .plan-card{
+        width: 70%;
+        margin: 5% 15%;
+    }
+    .plan-card img{
+        width: 30%;
+        margin: 5% auto;
+    }
+    .product-card{
+        width: calc(31% - 2px);
+    }
 }
 @media screen and (max-width: 980px) {
+    
     .certificate-card{
         width: 45%;
     }
@@ -910,9 +926,23 @@ footer{
         font-size: 1.4rem;
         width: 55%;
     }
+    #cs-1 h1, #cs-2 h1, #cs-3 h1{
+        font-size: 1.8rem;
+    }
+    #cs-1 p, #cs-2 p, #cs-3 p{
+        font-size: 1.3rem;
+    }
 }
-
+@media screen and (max-width: 720px){
+    .product-card{
+        width: calc(48% - 2px);
+    }
+}
 @media screen and (max-width: 550px) {
+    .product-card{
+        width: 80%;
+        margin: 1% 10%;
+    }
     .team-card .member-img{
         width: 200px;
         height: 200px;
