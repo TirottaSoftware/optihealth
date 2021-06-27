@@ -73,6 +73,9 @@ nav{
 #nav-apple .nav-links li a:after{
     background: #B31F13;
 }
+#nav-black .nav-links li a:after{
+    background: gray;
+}
 .nav-links li a:hover:after{
     width: 100%;
 }
@@ -628,6 +631,10 @@ footer{
 #nav-apple{
     background: #e7483dcb;
 }
+#nav-black{
+    background: black;
+    position: relative;
+}
 .hero-carousel{
     overflow: hidden;
 }
@@ -759,9 +766,77 @@ footer{
     padding: 3%;
     font-size: 1.2rem;
 }
+/* CONTACTS--------------------------------------------------------------- */
 
+.contacts-container{
+    display:flex;
+    width: 80%;
+    margin:10%;
+}
+.contacts-info{
+    width: 50%;
+    display:flex;
+    flex-flow: column;
+}
+.contacts-info .contact-card{
+    font-family: 'Khula', sans-serif;
+    display:flex;
+    width: 50%;
+    margin: 1% 0;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.contact-card img{
+    width: 10%;
+}
+.contact-card h3{
+    margin-left: 3%;
+}
+.contacts-form{
+    display:flex;
+    flex-flow: column;
+    width: 50%;
+}
+.contacts-form input, .contacts-form textarea{
+    font-family: 'Telex', sans-serif;
+    font-size:1.5rem;
+    padding: 1%;
+    border: 1px solid black;
+    resize: none;    
+    outline: none;
+    color: rgb(68, 67, 67);
+    margin: 1% 0;
+}
+.contacts-form #btn-submit{
+    font-size: 1.4rem;
+    padding: 1%;
+    width: 40%;
+    cursor: pointer;
+    background: white;
+    border: 1px solid black;
+}
 /* RESPONSIVENESS--------------------------------------------------------------- */
 @media screen and (max-width: 1366px) {
+    .contacts-container{
+        flex-flow: column;
+        align-items: center;
+    }
+    #btn-submit{
+        margin: 1% 30%;
+    }
+    .contacts-info{
+        width: 100%;
+        margin:0;
+        align-items: center;
+    }
+    .contact-card{
+        justify-content: center;
+        width: 100%;
+    }
+    .contacts-form{
+        width: 100%;
+        margin: 0;
+    }
     .team-container{
         flex-wrap: wrap;
         justify-content: center;
@@ -804,7 +879,9 @@ footer{
     }
 }
 @media screen and (max-width: 980px) {
-    
+    .contacts-info .contact-card{
+        font-size: 1.2rem;
+    }
     .certificate-card{
         width: 45%;
     }
